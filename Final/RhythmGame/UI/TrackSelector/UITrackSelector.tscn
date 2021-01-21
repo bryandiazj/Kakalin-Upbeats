@@ -1,0 +1,395 @@
+[gd_scene load_steps=28 format=2]
+
+[ext_resource path="res://RhythmGame/Tracks/DiscoLounge/disco_lounge.tres" type="Resource" id=1]
+[ext_resource path="res://RhythmGame/UI/TrackSelector/UITrackSelector.gd" type="Script" id=2]
+[ext_resource path="res://RhythmGame/UI/TrackSelector/SelectArea.gd" type="Script" id=3]
+[ext_resource path="res://RhythmGame/UI/button_go_normal.png" type="Texture" id=4]
+[ext_resource path="res://RhythmGame/Tracks/TrackData.gd" type="Script" id=5]
+[ext_resource path="res://RhythmGame/UI/TrackSelector/DragDetector.gd" type="Script" id=6]
+[ext_resource path="res://RhythmGame/UI/button_go_hover.png" type="Texture" id=7]
+[ext_resource path="res://RhythmGame/Tracks/Cephalopod/cephalopod.tres" type="Resource" id=8]
+[ext_resource path="res://RhythmGame/UI/LabelCustom.tscn" type="PackedScene" id=9]
+[ext_resource path="res://RhythmGame/UI/TrackSelector/TrackTile.tscn" type="PackedScene" id=10]
+[ext_resource path="res://RhythmGame/UI/TrackSelector/TrackTiles.gd" type="Script" id=11]
+[ext_resource path="res://RhythmGame/UI/TrackSelector/2.png" type="Texture" id=12]
+[ext_resource path="res://Visualization/scenes/external-content.duckduckgo.com.png" type="Texture" id=13]
+[ext_resource path="res://RhythmGame/UI/TrackSelector/Setting.gd" type="Script" id=14]
+[ext_resource path="res://RhythmGame/UI/Fonts/Montserrat-Bold.ttf" type="DynamicFontData" id=15]
+[ext_resource path="res://RhythmGame/UI/TrackSelector/Music.gd" type="Script" id=16]
+[ext_resource path="res://RhythmGame/Tracks/Secret of Life/secret_of_life.tres" type="Resource" id=17]
+[ext_resource path="res://RhythmGame/Tracks/RebelYell/rebel_yell.tres" type="Resource" id=18]
+[ext_resource path="res://RhythmGame/Tracks/Werq/icon_werq.png" type="Texture" id=19]
+[ext_resource path="res://RhythmGame/Tracks/Die Prinzen/die_prinzen.tres" type="Resource" id=20]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 5, 200 )
+
+[sub_resource type="Resource" id=7]
+script = ExtResource( 5 )
+label = "Werq"
+stream = "res://RhythmGame/Tracks/Werq/Werq.ogg"
+bpm = 125
+icon = ExtResource( 19 )
+artist = "Kevin MacLeod"
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 960, 270 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "fade_in_track"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AudioStreamPlayer:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.420448, 1 ),
+"update": 0,
+"values": [ -80.0, -12.0 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "fade_out_track"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AudioStreamPlayer:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.42, 1 ),
+"update": 0,
+"values": [ -12.0, -80.0 ]
+}
+
+[sub_resource type="DynamicFont" id=5]
+size = 70
+font_data = ExtResource( 15 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 60
+font_data = ExtResource( 15 )
+
+[node name="UITrackSelector" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SelectArea" type="Area2D" parent="."]
+position = Vector2( 960, 270 )
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SelectArea"]
+shape = SubResource( 1 )
+
+[node name="TrackCarousel" type="Position2D" parent="."]
+position = Vector2( 960, 270 )
+
+[node name="TrackTiles" type="Node2D" parent="TrackCarousel"]
+script = ExtResource( 11 )
+tracks = [ ExtResource( 8 ), ExtResource( 1 ), SubResource( 7 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 20 ) ]
+track_tile_scene = ExtResource( 10 )
+
+[node name="AlignTimer" type="Timer" parent="TrackCarousel/TrackTiles"]
+wait_time = 0.1
+one_shot = true
+
+[node name="Tween" type="Tween" parent="TrackCarousel/TrackTiles"]
+
+[node name="DragDetector" type="Area2D" parent="TrackCarousel"]
+collision_mask = 0
+script = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TrackCarousel/DragDetector"]
+shape = SubResource( 2 )
+
+[node name="TrackName" parent="." instance=ExtResource( 9 )]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 0.0
+margin_top = -10.0
+margin_right = 0.0
+margin_bottom = 101.0
+text = "Track Name"
+
+[node name="GoButton" type="TextureButton" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -170.0
+margin_top = -400.0
+margin_right = 170.0
+margin_bottom = -59.998
+mouse_filter = 1
+texture_normal = ExtResource( 4 )
+texture_hover = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Setting" type="TextureButton" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 694.606
+margin_top = -264.394
+margin_right = 950.676
+margin_bottom = -8.3938
+mouse_filter = 1
+texture_normal = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LogoutButton" type="TextureButton" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -945.0
+margin_top = -331.0
+margin_right = -628.0
+margin_bottom = -31.0
+mouse_filter = 1
+texture_normal = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+volume_db = -80.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/fade_in_track = SubResource( 3 )
+anims/fade_out_track = SubResource( 4 )
+
+[node name="Setting_Layer" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="Setting" type="Control" parent="Setting_Layer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="ColorRect" parent="Setting_Layer/Setting"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.356863 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Setting_Panel" type="Panel" parent="Setting_Layer/Setting/Background"]
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -586.292
+margin_top = 110.389
+margin_right = 604.708
+margin_bottom = -158.611
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Setting_Label" type="Label" parent="Setting_Layer/Setting/Background/Setting_Panel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -146.0
+margin_right = 146.0
+margin_bottom = 86.0
+custom_fonts/font = SubResource( 5 )
+text = "Setting"
+
+[node name="Resume" type="Button" parent="Setting_Layer/Setting/Background/Setting_Panel"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -264.349
+margin_bottom = -130.349
+
+[node name="Resume_tag" type="Label" parent="Setting_Layer/Setting/Background/Setting_Panel/Resume"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -128.0
+margin_top = -37.5
+margin_right = 128.0
+margin_bottom = 37.5
+custom_fonts/font = SubResource( 6 )
+text = "Resume"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Music" type="Button" parent="Setting_Layer/Setting/Background/Setting_Panel"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -70.3004
+margin_bottom = 63.6996
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Music_tag" type="Label" parent="Setting_Layer/Setting/Background/Setting_Panel/Music"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -214.5
+margin_top = -37.5
+margin_right = 214.5
+margin_bottom = 37.5
+custom_fonts/font = SubResource( 6 )
+text = "Music Setting"
+
+[node name="Leaderboard" type="Button" parent="Setting_Layer/Setting/Background/Setting_Panel"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = 142.485
+margin_bottom = 276.485
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Leaderboard_tag" type="Label" parent="Setting_Layer/Setting/Background/Setting_Panel/Leaderboard"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -201.0
+margin_top = -37.5
+margin_right = 201.0
+margin_bottom = 37.5
+custom_fonts/font = SubResource( 6 )
+text = "Leaderboard"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Music_Layer" type="CanvasLayer" parent="."]
+layer = 3
+
+[node name="Music" type="Control" parent="Music_Layer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Music_Panel" type="Panel" parent="Music_Layer/Music"]
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -586.292
+margin_top = 110.389
+margin_right = 604.708
+margin_bottom = -158.611
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Music_Label" type="Label" parent="Music_Layer/Music/Music_Panel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -107.0
+margin_right = 107.0
+margin_bottom = 86.0
+custom_fonts/font = SubResource( 5 )
+text = "Music"
+
+[node name="Back" type="Button" parent="Music_Layer/Music/Music_Panel"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = 193.339
+margin_bottom = 327.339
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Back_tag" type="Label" parent="Music_Layer/Music/Music_Panel/Back"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -79.0
+margin_top = -37.5
+margin_right = 79.0
+margin_bottom = 37.5
+custom_fonts/font = SubResource( 6 )
+text = "Back"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Mute" type="Button" parent="Music_Layer/Music/Music_Panel"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -18.5538
+margin_bottom = 115.446
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Mute_tag" type="Label" parent="Music_Layer/Music/Music_Panel/Mute"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -81.0
+margin_top = -37.5
+margin_right = 81.0
+margin_bottom = 37.5
+custom_fonts/font = SubResource( 6 )
+text = "Mute"
+
+[node name="HScrollBar" type="HScrollBar" parent="Music_Layer/Music/Music_Panel"]
+anchor_right = 1.0
+margin_top = 152.563
+margin_bottom = 295.563
+min_value = -40.0
+max_value = 20.0
+step = 10.0
+page = 10.0
+value = -10.0
+custom_step = 10.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="area_entered" from="SelectArea" to="SelectArea" method="_on_area_entered"]
+[connection signal="track_selected" from="SelectArea" to="." method="update_track_info"]
+[connection signal="track_selected" from="SelectArea" to="TrackCarousel/TrackTiles" method="_on_track_selected"]
+[connection signal="dragged" from="TrackCarousel/DragDetector" to="TrackCarousel/TrackTiles" method="scroll"]
+[connection signal="input_event" from="TrackCarousel/DragDetector" to="TrackCarousel/DragDetector" method="_on_input_event"]
+[connection signal="mouse_exited" from="TrackCarousel/DragDetector" to="TrackCarousel/DragDetector" method="_on_mouse_exited"]
+[connection signal="pressed" from="GoButton" to="." method="_on_GoButton_pressed"]
+[connection signal="pressed" from="Setting" to="Setting_Layer/Setting" method="_on_Setting_pressed"]
+[connection signal="pressed" from="LogoutButton" to="." method="_on_LogoutButton_pressed"]
+[connection signal="pressed" from="Setting_Layer/Setting/Background/Setting_Panel/Resume" to="Setting_Layer/Setting" method="_on_Resume_pressed"]
+[connection signal="pressed" from="Setting_Layer/Setting/Background/Setting_Panel/Music" to="Music_Layer/Music" method="_on_Music_pressed"]
+[connection signal="pressed" from="Setting_Layer/Setting/Background/Setting_Panel/Leaderboard" to="Setting_Layer/Setting" method="_on_Leaderboard_pressed"]
+[connection signal="pressed" from="Music_Layer/Music/Music_Panel/Back" to="Music_Layer/Music" method="_on_Back_pressed"]
+[connection signal="pressed" from="Music_Layer/Music/Music_Panel/Mute" to="Music_Layer/Music" method="_on_Mute_pressed"]
+[connection signal="value_changed" from="Music_Layer/Music/Music_Panel/HScrollBar" to="Music_Layer/Music" method="_on_HScrollBar_value_changed"]

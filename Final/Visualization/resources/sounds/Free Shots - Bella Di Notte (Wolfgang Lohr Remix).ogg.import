@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Free Shots - Bella Di Notte (Wolfgang Lohr Remix).ogg-5a7370f8c5a90bdb8f0d3daf1581b912.oggstr"
+
+[deps]
+
+source_file="res://Visualization/resources/sounds/Free Shots - Bella Di Notte (Wolfgang Lohr Remix).ogg"
+dest_files=[ "res://.import/Free Shots - Bella Di Notte (Wolfgang Lohr Remix).ogg-5a7370f8c5a90bdb8f0d3daf1581b912.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

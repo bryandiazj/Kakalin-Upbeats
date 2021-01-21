@@ -1,0 +1,2938 @@
+[gd_scene load_steps=133 format=2]
+
+[ext_resource path="res://RhythmGame/Editor/TrackInformation.gd" type="Script" id=1]
+[ext_resource path="res://RhythmGame/Editor/EditorHitBeat.tscn" type="PackedScene" id=2]
+[ext_resource path="res://RhythmGame/Editor/EditorHitRest.tscn" type="PackedScene" id=3]
+[ext_resource path="res://RhythmGame/Editor/EditorHitRoller.tscn" type="PackedScene" id=4]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -384 )
+}
+
+[sub_resource type="Curve2D" id=2]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 0, 384 )
+}
+
+[sub_resource type="Curve2D" id=3]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, -288, -288 )
+}
+
+[sub_resource type="Curve2D" id=4]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 192, 0 )
+}
+
+[sub_resource type="Curve2D" id=5]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 288, -288 )
+}
+
+[sub_resource type="Curve2D" id=6]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, -288, 288 )
+}
+
+[sub_resource type="Curve2D" id=7]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, -288, -288 )
+}
+
+[sub_resource type="Curve2D" id=8]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 192, 0 )
+}
+
+[sub_resource type="Curve2D" id=9]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -384 )
+}
+
+[sub_resource type="Curve2D" id=10]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 0, 384 )
+}
+
+[sub_resource type="Curve2D" id=11]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, -288, -288 )
+}
+
+[sub_resource type="Curve2D" id=12]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 192, 0 )
+}
+
+[sub_resource type="Curve2D" id=13]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 288, -288 )
+}
+
+[sub_resource type="Curve2D" id=14]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, -288, 288 )
+}
+
+[sub_resource type="Curve2D" id=15]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, -288, -288 )
+}
+
+[sub_resource type="Curve2D" id=16]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 192, 0 )
+}
+
+[sub_resource type="Curve2D" id=17]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -384 )
+}
+
+[sub_resource type="Curve2D" id=18]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 0, 384 )
+}
+
+[sub_resource type="Curve2D" id=19]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, -288, -288 )
+}
+
+[sub_resource type="Curve2D" id=20]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 192, 0 )
+}
+
+[sub_resource type="Curve2D" id=21]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 288, -288 )
+}
+
+[sub_resource type="Curve2D" id=22]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, -288, 288 )
+}
+
+[sub_resource type="Curve2D" id=23]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, -288, -288 )
+}
+
+[sub_resource type="Curve2D" id=24]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 192, 0 )
+}
+
+[sub_resource type="Curve2D" id=25]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -384 )
+}
+
+[sub_resource type="Curve2D" id=26]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 0, 384 )
+}
+
+[sub_resource type="Curve2D" id=27]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, -288, -288 )
+}
+
+[sub_resource type="Curve2D" id=28]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 192, 0 )
+}
+
+[sub_resource type="Curve2D" id=29]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 288, -288 )
+}
+
+[sub_resource type="Curve2D" id=30]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, -288, 288 )
+}
+
+[sub_resource type="Curve2D" id=31]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, -288, -288 )
+}
+
+[sub_resource type="Curve2D" id=32]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 192, 0 )
+}
+
+[sub_resource type="Curve2D" id=33]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -384 )
+}
+
+[sub_resource type="Curve2D" id=34]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 0, 384 )
+}
+
+[sub_resource type="Curve2D" id=35]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, -288, -288 )
+}
+
+[sub_resource type="Curve2D" id=36]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 192, 0 )
+}
+
+[sub_resource type="Curve2D" id=37]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 288, -288 )
+}
+
+[sub_resource type="Curve2D" id=38]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, -288, 288 )
+}
+
+[sub_resource type="Curve2D" id=39]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, -288, -288 )
+}
+
+[sub_resource type="Curve2D" id=40]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 192, 0 )
+}
+
+[sub_resource type="Curve2D" id=41]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -384 )
+}
+
+[sub_resource type="Curve2D" id=42]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 0, 384 )
+}
+
+[sub_resource type="Curve2D" id=43]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, -288, -288 )
+}
+
+[sub_resource type="Curve2D" id=44]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 192, 0 )
+}
+
+[sub_resource type="Curve2D" id=45]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 288, -288 )
+}
+
+[sub_resource type="Curve2D" id=46]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, -288, 288 )
+}
+
+[sub_resource type="Curve2D" id=47]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, -288, -288 )
+}
+
+[sub_resource type="Curve2D" id=48]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 192, 0 )
+}
+
+[sub_resource type="Curve2D" id=49]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -384 )
+}
+
+[sub_resource type="Curve2D" id=50]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 0, 384 )
+}
+
+[sub_resource type="Curve2D" id=51]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, -288, -288 )
+}
+
+[sub_resource type="Curve2D" id=52]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 192, 0 )
+}
+
+[sub_resource type="Curve2D" id=53]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 288, -288 )
+}
+
+[sub_resource type="Curve2D" id=54]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, -288, 288 )
+}
+
+[sub_resource type="Curve2D" id=55]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, -288, -288 )
+}
+
+[sub_resource type="Curve2D" id=56]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 192, 0 )
+}
+
+[sub_resource type="Curve2D" id=57]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -384 )
+}
+
+[sub_resource type="Curve2D" id=58]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 0, 384 )
+}
+
+[sub_resource type="Curve2D" id=59]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, -288, -288 )
+}
+
+[sub_resource type="Curve2D" id=60]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 192, 0 )
+}
+
+[sub_resource type="Curve2D" id=61]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 288, -288 )
+}
+
+[sub_resource type="Curve2D" id=62]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, -288, 288 )
+}
+
+[sub_resource type="Curve2D" id=63]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, -288, -288 )
+}
+
+[sub_resource type="Curve2D" id=64]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 192, 0 )
+}
+
+[sub_resource type="Curve2D" id=65]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -384 )
+}
+
+[sub_resource type="Curve2D" id=66]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 0, 384 )
+}
+
+[sub_resource type="Curve2D" id=67]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, -288, -288 )
+}
+
+[sub_resource type="Curve2D" id=68]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 192, 0 )
+}
+
+[sub_resource type="Curve2D" id=69]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 288, -288 )
+}
+
+[sub_resource type="Curve2D" id=70]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, -288, 288 )
+}
+
+[sub_resource type="Curve2D" id=71]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, -288, -288 )
+}
+
+[sub_resource type="Curve2D" id=72]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 192, 0 )
+}
+
+[sub_resource type="Curve2D" id=73]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -384 )
+}
+
+[sub_resource type="Curve2D" id=74]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 0, 384 )
+}
+
+[sub_resource type="Curve2D" id=75]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, -288, -288 )
+}
+
+[sub_resource type="Curve2D" id=76]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 192, 0 )
+}
+
+[sub_resource type="Curve2D" id=77]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 288, -288 )
+}
+
+[sub_resource type="Curve2D" id=78]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, -288, 288 )
+}
+
+[sub_resource type="Curve2D" id=79]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, -288, -288 )
+}
+
+[sub_resource type="Curve2D" id=80]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 192, 0 )
+}
+
+[sub_resource type="Curve2D" id=81]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -384 )
+}
+
+[sub_resource type="Curve2D" id=82]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 0, 384 )
+}
+
+[sub_resource type="Curve2D" id=83]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, -288, -288 )
+}
+
+[sub_resource type="Curve2D" id=84]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 192, 0 )
+}
+
+[sub_resource type="Curve2D" id=85]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 288, -288 )
+}
+
+[sub_resource type="Curve2D" id=86]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, -288, 288 )
+}
+
+[sub_resource type="Curve2D" id=87]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, -288, -288 )
+}
+
+[sub_resource type="Curve2D" id=88]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 192, 0 )
+}
+
+[sub_resource type="Curve2D" id=89]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -384 )
+}
+
+[sub_resource type="Curve2D" id=90]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 0, 384 )
+}
+
+[sub_resource type="Curve2D" id=91]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, -288, -288 )
+}
+
+[sub_resource type="Curve2D" id=92]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 192, 0 )
+}
+
+[sub_resource type="Curve2D" id=93]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 288, -288 )
+}
+
+[sub_resource type="Curve2D" id=94]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, -288, 288 )
+}
+
+[sub_resource type="Curve2D" id=95]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, -288, -288 )
+}
+
+[sub_resource type="Curve2D" id=96]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 192, 0 )
+}
+
+[sub_resource type="Curve2D" id=97]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -384 )
+}
+
+[sub_resource type="Curve2D" id=98]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 0, 384 )
+}
+
+[sub_resource type="Curve2D" id=99]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, -288, -288 )
+}
+
+[sub_resource type="Curve2D" id=100]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 192, 0 )
+}
+
+[sub_resource type="Curve2D" id=101]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 288, -288 )
+}
+
+[sub_resource type="Curve2D" id=102]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, -288, 288 )
+}
+
+[sub_resource type="Curve2D" id=103]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, -288, -288 )
+}
+
+[sub_resource type="Curve2D" id=104]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 192, 0 )
+}
+
+[sub_resource type="Curve2D" id=105]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -384 )
+}
+
+[sub_resource type="Curve2D" id=106]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 0, 384 )
+}
+
+[sub_resource type="Curve2D" id=107]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, -288, -288 )
+}
+
+[sub_resource type="Curve2D" id=108]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 192, 0 )
+}
+
+[sub_resource type="Curve2D" id=109]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 288, -288 )
+}
+
+[sub_resource type="Curve2D" id=110]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, -288, 288 )
+}
+
+[sub_resource type="Curve2D" id=111]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, -288, -288 )
+}
+
+[sub_resource type="Curve2D" id=112]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 192, 0 )
+}
+
+[sub_resource type="Curve2D" id=113]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -384 )
+}
+
+[sub_resource type="Curve2D" id=114]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 0, 384 )
+}
+
+[sub_resource type="Curve2D" id=115]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, -288, -288 )
+}
+
+[sub_resource type="Curve2D" id=116]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 192, 0 )
+}
+
+[sub_resource type="Curve2D" id=117]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 288, -288 )
+}
+
+[sub_resource type="Curve2D" id=118]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, -288, 288 )
+}
+
+[sub_resource type="Curve2D" id=119]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, -288, -288 )
+}
+
+[sub_resource type="Curve2D" id=120]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 192, 0 )
+}
+
+[sub_resource type="Curve2D" id=121]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -384 )
+}
+
+[sub_resource type="Curve2D" id=122]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 0, 384 )
+}
+
+[sub_resource type="Curve2D" id=123]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, -288, -288 )
+}
+
+[sub_resource type="Curve2D" id=124]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 192, 0 )
+}
+
+[sub_resource type="Curve2D" id=125]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 288, -288 )
+}
+
+[sub_resource type="Curve2D" id=126]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, -288, 288 )
+}
+
+[sub_resource type="Curve2D" id=127]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, -288, -288 )
+}
+
+[sub_resource type="Curve2D" id=128]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.25, 0, 0, 0, 0, 0, 192, 0 )
+}
+
+[node name="Die Prinzen" type="Node2D"]
+script = ExtResource( 1 )
+delay_start = 11
+
+[node name="0" type="Node2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="0" instance=ExtResource( 4 )]
+position = Vector2( 672, 576 )
+curve = SubResource( 1 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="0" instance=ExtResource( 3 )]
+position = Vector2( 768, 288 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="0" instance=ExtResource( 2 )]
+position = Vector2( 768, 96 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="0" instance=ExtResource( 4 )]
+position = Vector2( 864, 192 )
+curve = SubResource( 2 )
+half_beats = 4
+
+[node name="EditorHitRest2" parent="0" instance=ExtResource( 3 )]
+position = Vector2( 864, 672 )
+half_beats = 3
+
+[node name="EditorHitBeat2" parent="0" instance=ExtResource( 2 )]
+position = Vector2( 768, 672 )
+half_beats = 2
+
+[node name="1" type="Node2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="1" instance=ExtResource( 4 )]
+position = Vector2( 672, 576 )
+curve = SubResource( 3 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="1" instance=ExtResource( 3 )]
+position = Vector2( 288, 384 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="1" instance=ExtResource( 2 )]
+position = Vector2( 480, 192 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="1" instance=ExtResource( 4 )]
+position = Vector2( 576, 288 )
+curve = SubResource( 4 )
+half_beats = 2
+
+[node name="EditorHitRest2" parent="1" instance=ExtResource( 3 )]
+position = Vector2( 864, 384 )
+half_beats = 1
+
+[node name="EditorHitBeat2" parent="1" instance=ExtResource( 2 )]
+position = Vector2( 960, 288 )
+half_beats = 1
+
+[node name="EditorHitRest3" parent="1" instance=ExtResource( 3 )]
+position = Vector2( 1056, 384 )
+half_beats = 3
+
+[node name="EditorHitBeat3" parent="1" instance=ExtResource( 2 )]
+position = Vector2( 1152, 288 )
+half_beats = 2
+
+[node name="2" type="Node2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="2" instance=ExtResource( 4 )]
+position = Vector2( 1152, 480 )
+curve = SubResource( 5 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="2" instance=ExtResource( 3 )]
+position = Vector2( 1536, 288 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="2" instance=ExtResource( 2 )]
+position = Vector2( 1632, 192 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="2" instance=ExtResource( 4 )]
+position = Vector2( 1728, 288 )
+curve = SubResource( 6 )
+half_beats = 4
+
+[node name="EditorHitRest2" parent="2" instance=ExtResource( 3 )]
+position = Vector2( 1344, 672 )
+half_beats = 3
+
+[node name="EditorHitBeat4" parent="2" instance=ExtResource( 2 )]
+position = Vector2( 1248, 480 )
+half_beats = 2
+
+[node name="3" type="Node2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="3" instance=ExtResource( 4 )]
+position = Vector2( 1056, 576 )
+curve = SubResource( 7 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="3" instance=ExtResource( 3 )]
+position = Vector2( 672, 192 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="3" instance=ExtResource( 2 )]
+position = Vector2( 864, 192 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="3" instance=ExtResource( 4 )]
+position = Vector2( 960, 288 )
+curve = SubResource( 8 )
+half_beats = 2
+
+[node name="EditorHitRest2" parent="3" instance=ExtResource( 3 )]
+position = Vector2( 1248, 192 )
+half_beats = 1
+
+[node name="EditorHitBeat2" parent="3" instance=ExtResource( 2 )]
+position = Vector2( 1344, 288 )
+half_beats = 2
+
+[node name="EditorHitRest3" parent="3" instance=ExtResource( 3 )]
+position = Vector2( 1440, 384 )
+half_beats = 2
+
+[node name="EditorHitBeat3" parent="3" instance=ExtResource( 2 )]
+position = Vector2( 1536, 288 )
+half_beats = 2
+
+[node name="4" type="Node2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="4" instance=ExtResource( 4 )]
+position = Vector2( 672, 576 )
+curve = SubResource( 9 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="4" instance=ExtResource( 3 )]
+position = Vector2( 768, 288 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="4" instance=ExtResource( 2 )]
+position = Vector2( 768, 96 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="4" instance=ExtResource( 4 )]
+position = Vector2( 864, 192 )
+curve = SubResource( 10 )
+half_beats = 4
+
+[node name="EditorHitRest2" parent="4" instance=ExtResource( 3 )]
+position = Vector2( 864, 672 )
+half_beats = 3
+
+[node name="EditorHitBeat2" parent="4" instance=ExtResource( 2 )]
+position = Vector2( 768, 672 )
+half_beats = 2
+
+[node name="5" type="Node2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="5" instance=ExtResource( 4 )]
+position = Vector2( 672, 576 )
+curve = SubResource( 11 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="5" instance=ExtResource( 3 )]
+position = Vector2( 288, 384 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="5" instance=ExtResource( 2 )]
+position = Vector2( 480, 192 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="5" instance=ExtResource( 4 )]
+position = Vector2( 576, 288 )
+curve = SubResource( 12 )
+half_beats = 2
+
+[node name="EditorHitRest2" parent="5" instance=ExtResource( 3 )]
+position = Vector2( 864, 384 )
+half_beats = 1
+
+[node name="EditorHitBeat2" parent="5" instance=ExtResource( 2 )]
+position = Vector2( 960, 288 )
+half_beats = 1
+
+[node name="EditorHitRest3" parent="5" instance=ExtResource( 3 )]
+position = Vector2( 1056, 384 )
+half_beats = 3
+
+[node name="EditorHitBeat3" parent="5" instance=ExtResource( 2 )]
+position = Vector2( 1152, 288 )
+half_beats = 2
+
+[node name="6" type="Node2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="6" instance=ExtResource( 4 )]
+position = Vector2( 1152, 480 )
+curve = SubResource( 13 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="6" instance=ExtResource( 3 )]
+position = Vector2( 1536, 288 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="6" instance=ExtResource( 2 )]
+position = Vector2( 1632, 192 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="6" instance=ExtResource( 4 )]
+position = Vector2( 1728, 288 )
+curve = SubResource( 14 )
+half_beats = 4
+
+[node name="EditorHitRest2" parent="6" instance=ExtResource( 3 )]
+position = Vector2( 1344, 672 )
+half_beats = 3
+
+[node name="EditorHitBeat4" parent="6" instance=ExtResource( 2 )]
+position = Vector2( 1248, 480 )
+half_beats = 2
+
+[node name="7" type="Node2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="7" instance=ExtResource( 4 )]
+position = Vector2( 1056, 576 )
+curve = SubResource( 15 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="7" instance=ExtResource( 3 )]
+position = Vector2( 672, 192 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="7" instance=ExtResource( 2 )]
+position = Vector2( 864, 192 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="7" instance=ExtResource( 4 )]
+position = Vector2( 960, 288 )
+curve = SubResource( 16 )
+half_beats = 2
+
+[node name="EditorHitRest2" parent="7" instance=ExtResource( 3 )]
+position = Vector2( 1248, 192 )
+half_beats = 1
+
+[node name="EditorHitBeat2" parent="7" instance=ExtResource( 2 )]
+position = Vector2( 1344, 288 )
+half_beats = 2
+
+[node name="EditorHitRest3" parent="7" instance=ExtResource( 3 )]
+position = Vector2( 1440, 384 )
+half_beats = 2
+
+[node name="EditorHitBeat3" parent="7" instance=ExtResource( 2 )]
+position = Vector2( 1536, 288 )
+half_beats = 2
+
+[node name="8" type="Node2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="8" instance=ExtResource( 4 )]
+position = Vector2( 672, 576 )
+curve = SubResource( 17 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="8" instance=ExtResource( 3 )]
+position = Vector2( 768, 288 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="8" instance=ExtResource( 2 )]
+position = Vector2( 768, 96 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="8" instance=ExtResource( 4 )]
+position = Vector2( 864, 192 )
+curve = SubResource( 18 )
+half_beats = 4
+
+[node name="EditorHitRest2" parent="8" instance=ExtResource( 3 )]
+position = Vector2( 864, 672 )
+half_beats = 3
+
+[node name="EditorHitBeat2" parent="8" instance=ExtResource( 2 )]
+position = Vector2( 768, 672 )
+half_beats = 2
+
+[node name="9" type="Node2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="9" instance=ExtResource( 4 )]
+position = Vector2( 672, 576 )
+curve = SubResource( 19 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="9" instance=ExtResource( 3 )]
+position = Vector2( 288, 384 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="9" instance=ExtResource( 2 )]
+position = Vector2( 480, 192 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="9" instance=ExtResource( 4 )]
+position = Vector2( 576, 288 )
+curve = SubResource( 20 )
+half_beats = 2
+
+[node name="EditorHitRest2" parent="9" instance=ExtResource( 3 )]
+position = Vector2( 864, 384 )
+half_beats = 1
+
+[node name="EditorHitBeat2" parent="9" instance=ExtResource( 2 )]
+position = Vector2( 960, 288 )
+half_beats = 1
+
+[node name="EditorHitRest3" parent="9" instance=ExtResource( 3 )]
+position = Vector2( 1056, 384 )
+half_beats = 3
+
+[node name="EditorHitBeat3" parent="9" instance=ExtResource( 2 )]
+position = Vector2( 1152, 288 )
+half_beats = 2
+
+[node name="10" type="Node2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="10" instance=ExtResource( 4 )]
+position = Vector2( 1152, 480 )
+curve = SubResource( 21 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="10" instance=ExtResource( 3 )]
+position = Vector2( 1536, 288 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="10" instance=ExtResource( 2 )]
+position = Vector2( 1632, 192 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="10" instance=ExtResource( 4 )]
+position = Vector2( 1728, 288 )
+curve = SubResource( 22 )
+half_beats = 4
+
+[node name="EditorHitRest2" parent="10" instance=ExtResource( 3 )]
+position = Vector2( 1344, 672 )
+half_beats = 3
+
+[node name="EditorHitBeat4" parent="10" instance=ExtResource( 2 )]
+position = Vector2( 1248, 480 )
+half_beats = 2
+
+[node name="11" type="Node2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="11" instance=ExtResource( 4 )]
+position = Vector2( 1056, 576 )
+curve = SubResource( 23 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="11" instance=ExtResource( 3 )]
+position = Vector2( 672, 192 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="11" instance=ExtResource( 2 )]
+position = Vector2( 864, 192 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="11" instance=ExtResource( 4 )]
+position = Vector2( 960, 288 )
+curve = SubResource( 24 )
+half_beats = 2
+
+[node name="EditorHitRest2" parent="11" instance=ExtResource( 3 )]
+position = Vector2( 1248, 192 )
+half_beats = 1
+
+[node name="EditorHitBeat2" parent="11" instance=ExtResource( 2 )]
+position = Vector2( 1344, 288 )
+half_beats = 2
+
+[node name="EditorHitRest3" parent="11" instance=ExtResource( 3 )]
+position = Vector2( 1440, 384 )
+half_beats = 2
+
+[node name="EditorHitBeat3" parent="11" instance=ExtResource( 2 )]
+position = Vector2( 1536, 288 )
+half_beats = 2
+
+[node name="12" type="Node2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="12" instance=ExtResource( 4 )]
+position = Vector2( 672, 576 )
+curve = SubResource( 25 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="12" instance=ExtResource( 3 )]
+position = Vector2( 768, 288 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="12" instance=ExtResource( 2 )]
+position = Vector2( 768, 96 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="12" instance=ExtResource( 4 )]
+position = Vector2( 864, 192 )
+curve = SubResource( 26 )
+half_beats = 4
+
+[node name="EditorHitRest2" parent="12" instance=ExtResource( 3 )]
+position = Vector2( 864, 672 )
+half_beats = 3
+
+[node name="EditorHitBeat2" parent="12" instance=ExtResource( 2 )]
+position = Vector2( 768, 672 )
+half_beats = 2
+
+[node name="13" type="Node2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="13" instance=ExtResource( 4 )]
+position = Vector2( 672, 576 )
+curve = SubResource( 27 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="13" instance=ExtResource( 3 )]
+position = Vector2( 288, 384 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="13" instance=ExtResource( 2 )]
+position = Vector2( 480, 192 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="13" instance=ExtResource( 4 )]
+position = Vector2( 576, 288 )
+curve = SubResource( 28 )
+half_beats = 2
+
+[node name="EditorHitRest2" parent="13" instance=ExtResource( 3 )]
+position = Vector2( 864, 384 )
+half_beats = 1
+
+[node name="EditorHitBeat2" parent="13" instance=ExtResource( 2 )]
+position = Vector2( 960, 288 )
+half_beats = 1
+
+[node name="EditorHitRest3" parent="13" instance=ExtResource( 3 )]
+position = Vector2( 1056, 384 )
+half_beats = 3
+
+[node name="EditorHitBeat3" parent="13" instance=ExtResource( 2 )]
+position = Vector2( 1152, 288 )
+half_beats = 2
+
+[node name="14" type="Node2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="14" instance=ExtResource( 4 )]
+position = Vector2( 1152, 480 )
+curve = SubResource( 29 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="14" instance=ExtResource( 3 )]
+position = Vector2( 1536, 288 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="14" instance=ExtResource( 2 )]
+position = Vector2( 1632, 192 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="14" instance=ExtResource( 4 )]
+position = Vector2( 1728, 288 )
+curve = SubResource( 30 )
+half_beats = 4
+
+[node name="EditorHitRest2" parent="14" instance=ExtResource( 3 )]
+position = Vector2( 1344, 672 )
+half_beats = 3
+
+[node name="EditorHitBeat4" parent="14" instance=ExtResource( 2 )]
+position = Vector2( 1248, 480 )
+half_beats = 2
+
+[node name="15" type="Node2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="15" instance=ExtResource( 4 )]
+position = Vector2( 1056, 576 )
+curve = SubResource( 31 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="15" instance=ExtResource( 3 )]
+position = Vector2( 672, 192 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="15" instance=ExtResource( 2 )]
+position = Vector2( 864, 192 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="15" instance=ExtResource( 4 )]
+position = Vector2( 960, 288 )
+curve = SubResource( 32 )
+half_beats = 2
+
+[node name="EditorHitRest2" parent="15" instance=ExtResource( 3 )]
+position = Vector2( 1248, 192 )
+half_beats = 1
+
+[node name="EditorHitBeat2" parent="15" instance=ExtResource( 2 )]
+position = Vector2( 1344, 288 )
+half_beats = 2
+
+[node name="EditorHitRest3" parent="15" instance=ExtResource( 3 )]
+position = Vector2( 1440, 384 )
+half_beats = 2
+
+[node name="EditorHitBeat3" parent="15" instance=ExtResource( 2 )]
+position = Vector2( 1536, 288 )
+half_beats = 2
+
+[node name="16" type="Node2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="16" instance=ExtResource( 4 )]
+position = Vector2( 672, 576 )
+curve = SubResource( 33 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="16" instance=ExtResource( 3 )]
+position = Vector2( 768, 288 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="16" instance=ExtResource( 2 )]
+position = Vector2( 768, 96 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="16" instance=ExtResource( 4 )]
+position = Vector2( 864, 192 )
+curve = SubResource( 34 )
+half_beats = 4
+
+[node name="EditorHitRest2" parent="16" instance=ExtResource( 3 )]
+position = Vector2( 864, 672 )
+half_beats = 3
+
+[node name="EditorHitBeat2" parent="16" instance=ExtResource( 2 )]
+position = Vector2( 768, 672 )
+half_beats = 2
+
+[node name="17" type="Node2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="17" instance=ExtResource( 4 )]
+position = Vector2( 672, 576 )
+curve = SubResource( 35 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="17" instance=ExtResource( 3 )]
+position = Vector2( 288, 384 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="17" instance=ExtResource( 2 )]
+position = Vector2( 480, 192 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="17" instance=ExtResource( 4 )]
+position = Vector2( 576, 288 )
+curve = SubResource( 36 )
+half_beats = 2
+
+[node name="EditorHitRest2" parent="17" instance=ExtResource( 3 )]
+position = Vector2( 864, 384 )
+half_beats = 1
+
+[node name="EditorHitBeat2" parent="17" instance=ExtResource( 2 )]
+position = Vector2( 960, 288 )
+half_beats = 1
+
+[node name="EditorHitRest3" parent="17" instance=ExtResource( 3 )]
+position = Vector2( 1056, 384 )
+half_beats = 3
+
+[node name="EditorHitBeat3" parent="17" instance=ExtResource( 2 )]
+position = Vector2( 1152, 288 )
+half_beats = 2
+
+[node name="18" type="Node2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="18" instance=ExtResource( 4 )]
+position = Vector2( 1152, 480 )
+curve = SubResource( 37 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="18" instance=ExtResource( 3 )]
+position = Vector2( 1536, 288 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="18" instance=ExtResource( 2 )]
+position = Vector2( 1632, 192 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="18" instance=ExtResource( 4 )]
+position = Vector2( 1728, 288 )
+curve = SubResource( 38 )
+half_beats = 4
+
+[node name="EditorHitRest2" parent="18" instance=ExtResource( 3 )]
+position = Vector2( 1344, 672 )
+half_beats = 3
+
+[node name="EditorHitBeat4" parent="18" instance=ExtResource( 2 )]
+position = Vector2( 1248, 480 )
+half_beats = 2
+
+[node name="19" type="Node2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="19" instance=ExtResource( 4 )]
+position = Vector2( 1056, 576 )
+curve = SubResource( 39 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="19" instance=ExtResource( 3 )]
+position = Vector2( 672, 192 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="19" instance=ExtResource( 2 )]
+position = Vector2( 864, 192 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="19" instance=ExtResource( 4 )]
+position = Vector2( 960, 288 )
+curve = SubResource( 40 )
+half_beats = 2
+
+[node name="EditorHitRest2" parent="19" instance=ExtResource( 3 )]
+position = Vector2( 1248, 192 )
+half_beats = 1
+
+[node name="EditorHitBeat2" parent="19" instance=ExtResource( 2 )]
+position = Vector2( 1344, 288 )
+half_beats = 2
+
+[node name="EditorHitRest3" parent="19" instance=ExtResource( 3 )]
+position = Vector2( 1440, 384 )
+half_beats = 2
+
+[node name="EditorHitBeat3" parent="19" instance=ExtResource( 2 )]
+position = Vector2( 1536, 288 )
+half_beats = 2
+
+[node name="20" type="Node2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="20" instance=ExtResource( 4 )]
+position = Vector2( 672, 576 )
+curve = SubResource( 41 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="20" instance=ExtResource( 3 )]
+position = Vector2( 768, 288 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="20" instance=ExtResource( 2 )]
+position = Vector2( 768, 96 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="20" instance=ExtResource( 4 )]
+position = Vector2( 864, 192 )
+curve = SubResource( 42 )
+half_beats = 4
+
+[node name="EditorHitRest2" parent="20" instance=ExtResource( 3 )]
+position = Vector2( 864, 672 )
+half_beats = 3
+
+[node name="EditorHitBeat2" parent="20" instance=ExtResource( 2 )]
+position = Vector2( 768, 672 )
+half_beats = 2
+
+[node name="21" type="Node2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="21" instance=ExtResource( 4 )]
+position = Vector2( 672, 576 )
+curve = SubResource( 43 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="21" instance=ExtResource( 3 )]
+position = Vector2( 288, 384 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="21" instance=ExtResource( 2 )]
+position = Vector2( 480, 192 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="21" instance=ExtResource( 4 )]
+position = Vector2( 576, 288 )
+curve = SubResource( 44 )
+half_beats = 2
+
+[node name="EditorHitRest2" parent="21" instance=ExtResource( 3 )]
+position = Vector2( 864, 384 )
+half_beats = 1
+
+[node name="EditorHitBeat2" parent="21" instance=ExtResource( 2 )]
+position = Vector2( 960, 288 )
+half_beats = 1
+
+[node name="EditorHitRest3" parent="21" instance=ExtResource( 3 )]
+position = Vector2( 1056, 384 )
+half_beats = 3
+
+[node name="EditorHitBeat3" parent="21" instance=ExtResource( 2 )]
+position = Vector2( 1152, 288 )
+half_beats = 2
+
+[node name="22" type="Node2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="22" instance=ExtResource( 4 )]
+position = Vector2( 1152, 480 )
+curve = SubResource( 45 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="22" instance=ExtResource( 3 )]
+position = Vector2( 1536, 288 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="22" instance=ExtResource( 2 )]
+position = Vector2( 1632, 192 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="22" instance=ExtResource( 4 )]
+position = Vector2( 1728, 288 )
+curve = SubResource( 46 )
+half_beats = 4
+
+[node name="EditorHitRest2" parent="22" instance=ExtResource( 3 )]
+position = Vector2( 1344, 672 )
+half_beats = 3
+
+[node name="EditorHitBeat4" parent="22" instance=ExtResource( 2 )]
+position = Vector2( 1248, 480 )
+half_beats = 2
+
+[node name="23" type="Node2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="23" instance=ExtResource( 4 )]
+position = Vector2( 1056, 576 )
+curve = SubResource( 47 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="23" instance=ExtResource( 3 )]
+position = Vector2( 672, 192 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="23" instance=ExtResource( 2 )]
+position = Vector2( 864, 192 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="23" instance=ExtResource( 4 )]
+position = Vector2( 960, 288 )
+curve = SubResource( 48 )
+half_beats = 2
+
+[node name="EditorHitRest2" parent="23" instance=ExtResource( 3 )]
+position = Vector2( 1248, 192 )
+half_beats = 1
+
+[node name="EditorHitBeat2" parent="23" instance=ExtResource( 2 )]
+position = Vector2( 1344, 288 )
+half_beats = 2
+
+[node name="EditorHitRest3" parent="23" instance=ExtResource( 3 )]
+position = Vector2( 1440, 384 )
+half_beats = 2
+
+[node name="EditorHitBeat3" parent="23" instance=ExtResource( 2 )]
+position = Vector2( 1536, 288 )
+half_beats = 2
+
+[node name="24" type="Node2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="24" instance=ExtResource( 4 )]
+position = Vector2( 672, 576 )
+curve = SubResource( 49 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="24" instance=ExtResource( 3 )]
+position = Vector2( 768, 288 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="24" instance=ExtResource( 2 )]
+position = Vector2( 768, 96 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="24" instance=ExtResource( 4 )]
+position = Vector2( 864, 192 )
+curve = SubResource( 50 )
+half_beats = 4
+
+[node name="EditorHitRest2" parent="24" instance=ExtResource( 3 )]
+position = Vector2( 864, 672 )
+half_beats = 3
+
+[node name="EditorHitBeat2" parent="24" instance=ExtResource( 2 )]
+position = Vector2( 768, 672 )
+half_beats = 2
+
+[node name="25" type="Node2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="25" instance=ExtResource( 4 )]
+position = Vector2( 672, 576 )
+curve = SubResource( 51 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="25" instance=ExtResource( 3 )]
+position = Vector2( 288, 384 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="25" instance=ExtResource( 2 )]
+position = Vector2( 480, 192 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="25" instance=ExtResource( 4 )]
+position = Vector2( 576, 288 )
+curve = SubResource( 52 )
+half_beats = 2
+
+[node name="EditorHitRest2" parent="25" instance=ExtResource( 3 )]
+position = Vector2( 864, 384 )
+half_beats = 1
+
+[node name="EditorHitBeat2" parent="25" instance=ExtResource( 2 )]
+position = Vector2( 960, 288 )
+half_beats = 1
+
+[node name="EditorHitRest3" parent="25" instance=ExtResource( 3 )]
+position = Vector2( 1056, 384 )
+half_beats = 3
+
+[node name="EditorHitBeat3" parent="25" instance=ExtResource( 2 )]
+position = Vector2( 1152, 288 )
+half_beats = 2
+
+[node name="26" type="Node2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="26" instance=ExtResource( 4 )]
+position = Vector2( 1152, 480 )
+curve = SubResource( 53 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="26" instance=ExtResource( 3 )]
+position = Vector2( 1536, 288 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="26" instance=ExtResource( 2 )]
+position = Vector2( 1632, 192 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="26" instance=ExtResource( 4 )]
+position = Vector2( 1728, 288 )
+curve = SubResource( 54 )
+half_beats = 4
+
+[node name="EditorHitRest2" parent="26" instance=ExtResource( 3 )]
+position = Vector2( 1344, 672 )
+half_beats = 3
+
+[node name="EditorHitBeat4" parent="26" instance=ExtResource( 2 )]
+position = Vector2( 1248, 480 )
+half_beats = 2
+
+[node name="27" type="Node2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="27" instance=ExtResource( 4 )]
+position = Vector2( 1056, 576 )
+curve = SubResource( 55 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="27" instance=ExtResource( 3 )]
+position = Vector2( 672, 192 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="27" instance=ExtResource( 2 )]
+position = Vector2( 864, 192 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="27" instance=ExtResource( 4 )]
+position = Vector2( 960, 288 )
+curve = SubResource( 56 )
+half_beats = 2
+
+[node name="EditorHitRest2" parent="27" instance=ExtResource( 3 )]
+position = Vector2( 1248, 192 )
+half_beats = 1
+
+[node name="EditorHitBeat2" parent="27" instance=ExtResource( 2 )]
+position = Vector2( 1344, 288 )
+half_beats = 2
+
+[node name="EditorHitRest3" parent="27" instance=ExtResource( 3 )]
+position = Vector2( 1440, 384 )
+half_beats = 2
+
+[node name="EditorHitBeat3" parent="27" instance=ExtResource( 2 )]
+position = Vector2( 1536, 288 )
+half_beats = 2
+
+[node name="28" type="Node2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="28" instance=ExtResource( 4 )]
+position = Vector2( 672, 576 )
+curve = SubResource( 57 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="28" instance=ExtResource( 3 )]
+position = Vector2( 768, 288 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="28" instance=ExtResource( 2 )]
+position = Vector2( 768, 96 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="28" instance=ExtResource( 4 )]
+position = Vector2( 864, 192 )
+curve = SubResource( 58 )
+half_beats = 4
+
+[node name="EditorHitRest2" parent="28" instance=ExtResource( 3 )]
+position = Vector2( 864, 672 )
+half_beats = 3
+
+[node name="EditorHitBeat2" parent="28" instance=ExtResource( 2 )]
+position = Vector2( 768, 672 )
+half_beats = 2
+
+[node name="29" type="Node2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="29" instance=ExtResource( 4 )]
+position = Vector2( 672, 576 )
+curve = SubResource( 59 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="29" instance=ExtResource( 3 )]
+position = Vector2( 288, 384 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="29" instance=ExtResource( 2 )]
+position = Vector2( 480, 192 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="29" instance=ExtResource( 4 )]
+position = Vector2( 576, 288 )
+curve = SubResource( 60 )
+half_beats = 2
+
+[node name="EditorHitRest2" parent="29" instance=ExtResource( 3 )]
+position = Vector2( 864, 384 )
+half_beats = 1
+
+[node name="EditorHitBeat2" parent="29" instance=ExtResource( 2 )]
+position = Vector2( 960, 288 )
+half_beats = 1
+
+[node name="EditorHitRest3" parent="29" instance=ExtResource( 3 )]
+position = Vector2( 1056, 384 )
+half_beats = 3
+
+[node name="EditorHitBeat3" parent="29" instance=ExtResource( 2 )]
+position = Vector2( 1152, 288 )
+half_beats = 2
+
+[node name="30" type="Node2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="30" instance=ExtResource( 4 )]
+position = Vector2( 1152, 480 )
+curve = SubResource( 61 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="30" instance=ExtResource( 3 )]
+position = Vector2( 1536, 288 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="30" instance=ExtResource( 2 )]
+position = Vector2( 1632, 192 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="30" instance=ExtResource( 4 )]
+position = Vector2( 1728, 288 )
+curve = SubResource( 62 )
+half_beats = 4
+
+[node name="EditorHitRest2" parent="30" instance=ExtResource( 3 )]
+position = Vector2( 1344, 672 )
+half_beats = 3
+
+[node name="EditorHitBeat4" parent="30" instance=ExtResource( 2 )]
+position = Vector2( 1248, 480 )
+half_beats = 2
+
+[node name="31" type="Node2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="31" instance=ExtResource( 4 )]
+position = Vector2( 1056, 576 )
+curve = SubResource( 63 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="31" instance=ExtResource( 3 )]
+position = Vector2( 672, 192 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="31" instance=ExtResource( 2 )]
+position = Vector2( 864, 192 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="31" instance=ExtResource( 4 )]
+position = Vector2( 960, 288 )
+curve = SubResource( 64 )
+half_beats = 2
+
+[node name="EditorHitRest2" parent="31" instance=ExtResource( 3 )]
+position = Vector2( 1248, 192 )
+half_beats = 1
+
+[node name="EditorHitBeat2" parent="31" instance=ExtResource( 2 )]
+position = Vector2( 1344, 288 )
+half_beats = 2
+
+[node name="EditorHitRest3" parent="31" instance=ExtResource( 3 )]
+position = Vector2( 1440, 384 )
+half_beats = 2
+
+[node name="EditorHitBeat3" parent="31" instance=ExtResource( 2 )]
+position = Vector2( 1536, 288 )
+half_beats = 2
+
+[node name="32" type="Node2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="32" instance=ExtResource( 4 )]
+position = Vector2( 672, 576 )
+curve = SubResource( 65 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="32" instance=ExtResource( 3 )]
+position = Vector2( 768, 288 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="32" instance=ExtResource( 2 )]
+position = Vector2( 768, 96 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="32" instance=ExtResource( 4 )]
+position = Vector2( 864, 192 )
+curve = SubResource( 66 )
+half_beats = 4
+
+[node name="EditorHitRest2" parent="32" instance=ExtResource( 3 )]
+position = Vector2( 864, 672 )
+half_beats = 3
+
+[node name="EditorHitBeat2" parent="32" instance=ExtResource( 2 )]
+position = Vector2( 768, 672 )
+half_beats = 2
+
+[node name="33" type="Node2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="33" instance=ExtResource( 4 )]
+position = Vector2( 672, 576 )
+curve = SubResource( 67 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="33" instance=ExtResource( 3 )]
+position = Vector2( 288, 384 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="33" instance=ExtResource( 2 )]
+position = Vector2( 480, 192 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="33" instance=ExtResource( 4 )]
+position = Vector2( 576, 288 )
+curve = SubResource( 68 )
+half_beats = 2
+
+[node name="EditorHitRest2" parent="33" instance=ExtResource( 3 )]
+position = Vector2( 864, 384 )
+half_beats = 1
+
+[node name="EditorHitBeat2" parent="33" instance=ExtResource( 2 )]
+position = Vector2( 960, 288 )
+half_beats = 1
+
+[node name="EditorHitRest3" parent="33" instance=ExtResource( 3 )]
+position = Vector2( 1056, 384 )
+half_beats = 3
+
+[node name="EditorHitBeat3" parent="33" instance=ExtResource( 2 )]
+position = Vector2( 1152, 288 )
+half_beats = 2
+
+[node name="34" type="Node2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="34" instance=ExtResource( 4 )]
+position = Vector2( 1152, 480 )
+curve = SubResource( 69 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="34" instance=ExtResource( 3 )]
+position = Vector2( 1536, 288 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="34" instance=ExtResource( 2 )]
+position = Vector2( 1632, 192 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="34" instance=ExtResource( 4 )]
+position = Vector2( 1728, 288 )
+curve = SubResource( 70 )
+half_beats = 4
+
+[node name="EditorHitRest2" parent="34" instance=ExtResource( 3 )]
+position = Vector2( 1344, 672 )
+half_beats = 3
+
+[node name="EditorHitBeat4" parent="34" instance=ExtResource( 2 )]
+position = Vector2( 1248, 480 )
+half_beats = 2
+
+[node name="35" type="Node2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="35" instance=ExtResource( 4 )]
+position = Vector2( 1056, 576 )
+curve = SubResource( 71 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="35" instance=ExtResource( 3 )]
+position = Vector2( 672, 192 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="35" instance=ExtResource( 2 )]
+position = Vector2( 864, 192 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="35" instance=ExtResource( 4 )]
+position = Vector2( 960, 288 )
+curve = SubResource( 72 )
+half_beats = 2
+
+[node name="EditorHitRest2" parent="35" instance=ExtResource( 3 )]
+position = Vector2( 1248, 192 )
+half_beats = 1
+
+[node name="EditorHitBeat2" parent="35" instance=ExtResource( 2 )]
+position = Vector2( 1344, 288 )
+half_beats = 2
+
+[node name="EditorHitRest3" parent="35" instance=ExtResource( 3 )]
+position = Vector2( 1440, 384 )
+half_beats = 2
+
+[node name="EditorHitBeat3" parent="35" instance=ExtResource( 2 )]
+position = Vector2( 1536, 288 )
+half_beats = 2
+
+[node name="36" type="Node2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="36" instance=ExtResource( 4 )]
+position = Vector2( 672, 576 )
+curve = SubResource( 73 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="36" instance=ExtResource( 3 )]
+position = Vector2( 768, 288 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="36" instance=ExtResource( 2 )]
+position = Vector2( 768, 96 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="36" instance=ExtResource( 4 )]
+position = Vector2( 864, 192 )
+curve = SubResource( 74 )
+half_beats = 4
+
+[node name="EditorHitRest2" parent="36" instance=ExtResource( 3 )]
+position = Vector2( 864, 672 )
+half_beats = 3
+
+[node name="EditorHitBeat2" parent="36" instance=ExtResource( 2 )]
+position = Vector2( 768, 672 )
+half_beats = 2
+
+[node name="37" type="Node2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="37" instance=ExtResource( 4 )]
+position = Vector2( 672, 576 )
+curve = SubResource( 75 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="37" instance=ExtResource( 3 )]
+position = Vector2( 288, 384 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="37" instance=ExtResource( 2 )]
+position = Vector2( 480, 192 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="37" instance=ExtResource( 4 )]
+position = Vector2( 576, 288 )
+curve = SubResource( 76 )
+half_beats = 2
+
+[node name="EditorHitRest2" parent="37" instance=ExtResource( 3 )]
+position = Vector2( 864, 384 )
+half_beats = 1
+
+[node name="EditorHitBeat2" parent="37" instance=ExtResource( 2 )]
+position = Vector2( 960, 288 )
+half_beats = 1
+
+[node name="EditorHitRest3" parent="37" instance=ExtResource( 3 )]
+position = Vector2( 1056, 384 )
+half_beats = 3
+
+[node name="EditorHitBeat3" parent="37" instance=ExtResource( 2 )]
+position = Vector2( 1152, 288 )
+half_beats = 2
+
+[node name="38" type="Node2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="38" instance=ExtResource( 4 )]
+position = Vector2( 1152, 480 )
+curve = SubResource( 77 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="38" instance=ExtResource( 3 )]
+position = Vector2( 1536, 288 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="38" instance=ExtResource( 2 )]
+position = Vector2( 1632, 192 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="38" instance=ExtResource( 4 )]
+position = Vector2( 1728, 288 )
+curve = SubResource( 78 )
+half_beats = 4
+
+[node name="EditorHitRest2" parent="38" instance=ExtResource( 3 )]
+position = Vector2( 1344, 672 )
+half_beats = 3
+
+[node name="EditorHitBeat4" parent="38" instance=ExtResource( 2 )]
+position = Vector2( 1248, 480 )
+half_beats = 2
+
+[node name="39" type="Node2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="39" instance=ExtResource( 4 )]
+position = Vector2( 1056, 576 )
+curve = SubResource( 79 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="39" instance=ExtResource( 3 )]
+position = Vector2( 672, 192 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="39" instance=ExtResource( 2 )]
+position = Vector2( 864, 192 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="39" instance=ExtResource( 4 )]
+position = Vector2( 960, 288 )
+curve = SubResource( 80 )
+half_beats = 2
+
+[node name="EditorHitRest2" parent="39" instance=ExtResource( 3 )]
+position = Vector2( 1248, 192 )
+half_beats = 1
+
+[node name="EditorHitBeat2" parent="39" instance=ExtResource( 2 )]
+position = Vector2( 1344, 288 )
+half_beats = 2
+
+[node name="EditorHitRest3" parent="39" instance=ExtResource( 3 )]
+position = Vector2( 1440, 384 )
+half_beats = 2
+
+[node name="EditorHitBeat3" parent="39" instance=ExtResource( 2 )]
+position = Vector2( 1536, 288 )
+half_beats = 2
+
+[node name="40" type="Node2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="40" instance=ExtResource( 4 )]
+position = Vector2( 672, 576 )
+curve = SubResource( 81 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="40" instance=ExtResource( 3 )]
+position = Vector2( 768, 288 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="40" instance=ExtResource( 2 )]
+position = Vector2( 768, 96 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="40" instance=ExtResource( 4 )]
+position = Vector2( 864, 192 )
+curve = SubResource( 82 )
+half_beats = 4
+
+[node name="EditorHitRest2" parent="40" instance=ExtResource( 3 )]
+position = Vector2( 864, 672 )
+half_beats = 3
+
+[node name="EditorHitBeat2" parent="40" instance=ExtResource( 2 )]
+position = Vector2( 768, 672 )
+half_beats = 2
+
+[node name="41" type="Node2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="41" instance=ExtResource( 4 )]
+position = Vector2( 672, 576 )
+curve = SubResource( 83 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="41" instance=ExtResource( 3 )]
+position = Vector2( 288, 384 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="41" instance=ExtResource( 2 )]
+position = Vector2( 480, 192 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="41" instance=ExtResource( 4 )]
+position = Vector2( 576, 288 )
+curve = SubResource( 84 )
+half_beats = 2
+
+[node name="EditorHitRest2" parent="41" instance=ExtResource( 3 )]
+position = Vector2( 864, 384 )
+half_beats = 1
+
+[node name="EditorHitBeat2" parent="41" instance=ExtResource( 2 )]
+position = Vector2( 960, 288 )
+half_beats = 1
+
+[node name="EditorHitRest3" parent="41" instance=ExtResource( 3 )]
+position = Vector2( 1056, 384 )
+half_beats = 3
+
+[node name="EditorHitBeat3" parent="41" instance=ExtResource( 2 )]
+position = Vector2( 1152, 288 )
+half_beats = 2
+
+[node name="42" type="Node2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="42" instance=ExtResource( 4 )]
+position = Vector2( 1152, 480 )
+curve = SubResource( 85 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="42" instance=ExtResource( 3 )]
+position = Vector2( 1536, 288 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="42" instance=ExtResource( 2 )]
+position = Vector2( 1632, 192 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="42" instance=ExtResource( 4 )]
+position = Vector2( 1728, 288 )
+curve = SubResource( 86 )
+half_beats = 4
+
+[node name="EditorHitRest2" parent="42" instance=ExtResource( 3 )]
+position = Vector2( 1344, 672 )
+half_beats = 3
+
+[node name="EditorHitBeat4" parent="42" instance=ExtResource( 2 )]
+position = Vector2( 1248, 480 )
+half_beats = 2
+
+[node name="43" type="Node2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="43" instance=ExtResource( 4 )]
+position = Vector2( 1056, 576 )
+curve = SubResource( 87 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="43" instance=ExtResource( 3 )]
+position = Vector2( 672, 192 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="43" instance=ExtResource( 2 )]
+position = Vector2( 864, 192 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="43" instance=ExtResource( 4 )]
+position = Vector2( 960, 288 )
+curve = SubResource( 88 )
+half_beats = 2
+
+[node name="EditorHitRest2" parent="43" instance=ExtResource( 3 )]
+position = Vector2( 1248, 192 )
+half_beats = 1
+
+[node name="EditorHitBeat2" parent="43" instance=ExtResource( 2 )]
+position = Vector2( 1344, 288 )
+half_beats = 2
+
+[node name="EditorHitRest3" parent="43" instance=ExtResource( 3 )]
+position = Vector2( 1440, 384 )
+half_beats = 2
+
+[node name="EditorHitBeat3" parent="43" instance=ExtResource( 2 )]
+position = Vector2( 1536, 288 )
+half_beats = 2
+
+[node name="44" type="Node2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="44" instance=ExtResource( 4 )]
+position = Vector2( 672, 576 )
+curve = SubResource( 89 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="44" instance=ExtResource( 3 )]
+position = Vector2( 768, 288 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="44" instance=ExtResource( 2 )]
+position = Vector2( 768, 96 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="44" instance=ExtResource( 4 )]
+position = Vector2( 864, 192 )
+curve = SubResource( 90 )
+half_beats = 4
+
+[node name="EditorHitRest2" parent="44" instance=ExtResource( 3 )]
+position = Vector2( 864, 672 )
+half_beats = 3
+
+[node name="EditorHitBeat2" parent="44" instance=ExtResource( 2 )]
+position = Vector2( 768, 672 )
+half_beats = 2
+
+[node name="45" type="Node2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="45" instance=ExtResource( 4 )]
+position = Vector2( 672, 576 )
+curve = SubResource( 91 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="45" instance=ExtResource( 3 )]
+position = Vector2( 288, 384 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="45" instance=ExtResource( 2 )]
+position = Vector2( 480, 192 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="45" instance=ExtResource( 4 )]
+position = Vector2( 576, 288 )
+curve = SubResource( 92 )
+half_beats = 2
+
+[node name="EditorHitRest2" parent="45" instance=ExtResource( 3 )]
+position = Vector2( 864, 384 )
+half_beats = 1
+
+[node name="EditorHitBeat2" parent="45" instance=ExtResource( 2 )]
+position = Vector2( 960, 288 )
+half_beats = 1
+
+[node name="EditorHitRest3" parent="45" instance=ExtResource( 3 )]
+position = Vector2( 1056, 384 )
+half_beats = 3
+
+[node name="EditorHitBeat3" parent="45" instance=ExtResource( 2 )]
+position = Vector2( 1152, 288 )
+half_beats = 2
+
+[node name="46" type="Node2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="46" instance=ExtResource( 4 )]
+position = Vector2( 1152, 480 )
+curve = SubResource( 93 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="46" instance=ExtResource( 3 )]
+position = Vector2( 1536, 288 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="46" instance=ExtResource( 2 )]
+position = Vector2( 1632, 192 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="46" instance=ExtResource( 4 )]
+position = Vector2( 1728, 288 )
+curve = SubResource( 94 )
+half_beats = 4
+
+[node name="EditorHitRest2" parent="46" instance=ExtResource( 3 )]
+position = Vector2( 1344, 672 )
+half_beats = 3
+
+[node name="EditorHitBeat4" parent="46" instance=ExtResource( 2 )]
+position = Vector2( 1248, 480 )
+half_beats = 2
+
+[node name="47" type="Node2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="47" instance=ExtResource( 4 )]
+position = Vector2( 1056, 576 )
+curve = SubResource( 95 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="47" instance=ExtResource( 3 )]
+position = Vector2( 672, 192 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="47" instance=ExtResource( 2 )]
+position = Vector2( 864, 192 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="47" instance=ExtResource( 4 )]
+position = Vector2( 960, 288 )
+curve = SubResource( 96 )
+half_beats = 2
+
+[node name="EditorHitRest2" parent="47" instance=ExtResource( 3 )]
+position = Vector2( 1248, 192 )
+half_beats = 1
+
+[node name="EditorHitBeat2" parent="47" instance=ExtResource( 2 )]
+position = Vector2( 1344, 288 )
+half_beats = 2
+
+[node name="EditorHitRest3" parent="47" instance=ExtResource( 3 )]
+position = Vector2( 1440, 384 )
+half_beats = 2
+
+[node name="EditorHitBeat3" parent="47" instance=ExtResource( 2 )]
+position = Vector2( 1536, 288 )
+half_beats = 2
+
+[node name="48" type="Node2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="48" instance=ExtResource( 4 )]
+position = Vector2( 672, 576 )
+curve = SubResource( 97 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="48" instance=ExtResource( 3 )]
+position = Vector2( 768, 288 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="48" instance=ExtResource( 2 )]
+position = Vector2( 768, 96 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="48" instance=ExtResource( 4 )]
+position = Vector2( 864, 192 )
+curve = SubResource( 98 )
+half_beats = 4
+
+[node name="EditorHitRest2" parent="48" instance=ExtResource( 3 )]
+position = Vector2( 864, 672 )
+half_beats = 3
+
+[node name="EditorHitBeat2" parent="48" instance=ExtResource( 2 )]
+position = Vector2( 768, 672 )
+half_beats = 2
+
+[node name="49" type="Node2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="49" instance=ExtResource( 4 )]
+position = Vector2( 672, 576 )
+curve = SubResource( 99 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="49" instance=ExtResource( 3 )]
+position = Vector2( 288, 384 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="49" instance=ExtResource( 2 )]
+position = Vector2( 480, 192 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="49" instance=ExtResource( 4 )]
+position = Vector2( 576, 288 )
+curve = SubResource( 100 )
+half_beats = 2
+
+[node name="EditorHitRest2" parent="49" instance=ExtResource( 3 )]
+position = Vector2( 864, 384 )
+half_beats = 1
+
+[node name="EditorHitBeat2" parent="49" instance=ExtResource( 2 )]
+position = Vector2( 960, 288 )
+half_beats = 1
+
+[node name="EditorHitRest3" parent="49" instance=ExtResource( 3 )]
+position = Vector2( 1056, 384 )
+half_beats = 3
+
+[node name="EditorHitBeat3" parent="49" instance=ExtResource( 2 )]
+position = Vector2( 1152, 288 )
+half_beats = 2
+
+[node name="50" type="Node2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="50" instance=ExtResource( 4 )]
+position = Vector2( 1152, 480 )
+curve = SubResource( 101 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="50" instance=ExtResource( 3 )]
+position = Vector2( 1536, 288 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="50" instance=ExtResource( 2 )]
+position = Vector2( 1632, 192 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="50" instance=ExtResource( 4 )]
+position = Vector2( 1728, 288 )
+curve = SubResource( 102 )
+half_beats = 4
+
+[node name="EditorHitRest2" parent="50" instance=ExtResource( 3 )]
+position = Vector2( 1344, 672 )
+half_beats = 3
+
+[node name="EditorHitBeat4" parent="50" instance=ExtResource( 2 )]
+position = Vector2( 1248, 480 )
+half_beats = 2
+
+[node name="51" type="Node2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="51" instance=ExtResource( 4 )]
+position = Vector2( 1056, 576 )
+curve = SubResource( 103 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="51" instance=ExtResource( 3 )]
+position = Vector2( 672, 192 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="51" instance=ExtResource( 2 )]
+position = Vector2( 864, 192 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="51" instance=ExtResource( 4 )]
+position = Vector2( 960, 288 )
+curve = SubResource( 104 )
+half_beats = 2
+
+[node name="EditorHitRest2" parent="51" instance=ExtResource( 3 )]
+position = Vector2( 1248, 192 )
+half_beats = 1
+
+[node name="EditorHitBeat2" parent="51" instance=ExtResource( 2 )]
+position = Vector2( 1344, 288 )
+half_beats = 2
+
+[node name="EditorHitRest3" parent="51" instance=ExtResource( 3 )]
+position = Vector2( 1440, 384 )
+half_beats = 2
+
+[node name="EditorHitBeat3" parent="51" instance=ExtResource( 2 )]
+position = Vector2( 1536, 288 )
+half_beats = 2
+
+[node name="52" type="Node2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="52" instance=ExtResource( 4 )]
+position = Vector2( 672, 576 )
+curve = SubResource( 105 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="52" instance=ExtResource( 3 )]
+position = Vector2( 768, 288 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="52" instance=ExtResource( 2 )]
+position = Vector2( 768, 96 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="52" instance=ExtResource( 4 )]
+position = Vector2( 864, 192 )
+curve = SubResource( 106 )
+half_beats = 4
+
+[node name="EditorHitRest2" parent="52" instance=ExtResource( 3 )]
+position = Vector2( 864, 672 )
+half_beats = 3
+
+[node name="EditorHitBeat2" parent="52" instance=ExtResource( 2 )]
+position = Vector2( 768, 672 )
+half_beats = 2
+
+[node name="53" type="Node2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="53" instance=ExtResource( 4 )]
+position = Vector2( 672, 576 )
+curve = SubResource( 107 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="53" instance=ExtResource( 3 )]
+position = Vector2( 288, 384 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="53" instance=ExtResource( 2 )]
+position = Vector2( 480, 192 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="53" instance=ExtResource( 4 )]
+position = Vector2( 576, 288 )
+curve = SubResource( 108 )
+half_beats = 2
+
+[node name="EditorHitRest2" parent="53" instance=ExtResource( 3 )]
+position = Vector2( 864, 384 )
+half_beats = 1
+
+[node name="EditorHitBeat2" parent="53" instance=ExtResource( 2 )]
+position = Vector2( 960, 288 )
+half_beats = 1
+
+[node name="EditorHitRest3" parent="53" instance=ExtResource( 3 )]
+position = Vector2( 1056, 384 )
+half_beats = 3
+
+[node name="EditorHitBeat3" parent="53" instance=ExtResource( 2 )]
+position = Vector2( 1152, 288 )
+half_beats = 2
+
+[node name="54" type="Node2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="54" instance=ExtResource( 4 )]
+position = Vector2( 1152, 480 )
+curve = SubResource( 109 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="54" instance=ExtResource( 3 )]
+position = Vector2( 1536, 288 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="54" instance=ExtResource( 2 )]
+position = Vector2( 1632, 192 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="54" instance=ExtResource( 4 )]
+position = Vector2( 1728, 288 )
+curve = SubResource( 110 )
+half_beats = 4
+
+[node name="EditorHitRest2" parent="54" instance=ExtResource( 3 )]
+position = Vector2( 1344, 672 )
+half_beats = 3
+
+[node name="EditorHitBeat4" parent="54" instance=ExtResource( 2 )]
+position = Vector2( 1248, 480 )
+half_beats = 2
+
+[node name="55" type="Node2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="55" instance=ExtResource( 4 )]
+position = Vector2( 1056, 576 )
+curve = SubResource( 111 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="55" instance=ExtResource( 3 )]
+position = Vector2( 672, 192 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="55" instance=ExtResource( 2 )]
+position = Vector2( 864, 192 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="55" instance=ExtResource( 4 )]
+position = Vector2( 960, 288 )
+curve = SubResource( 112 )
+half_beats = 2
+
+[node name="EditorHitRest2" parent="55" instance=ExtResource( 3 )]
+position = Vector2( 1248, 192 )
+half_beats = 1
+
+[node name="EditorHitBeat2" parent="55" instance=ExtResource( 2 )]
+position = Vector2( 1344, 288 )
+half_beats = 2
+
+[node name="EditorHitRest3" parent="55" instance=ExtResource( 3 )]
+position = Vector2( 1440, 384 )
+half_beats = 2
+
+[node name="EditorHitBeat3" parent="55" instance=ExtResource( 2 )]
+position = Vector2( 1536, 288 )
+half_beats = 2
+
+[node name="56" type="Node2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="56" instance=ExtResource( 4 )]
+position = Vector2( 672, 576 )
+curve = SubResource( 113 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="56" instance=ExtResource( 3 )]
+position = Vector2( 768, 288 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="56" instance=ExtResource( 2 )]
+position = Vector2( 768, 96 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="56" instance=ExtResource( 4 )]
+position = Vector2( 864, 192 )
+curve = SubResource( 114 )
+half_beats = 4
+
+[node name="EditorHitRest2" parent="56" instance=ExtResource( 3 )]
+position = Vector2( 864, 672 )
+half_beats = 3
+
+[node name="EditorHitBeat2" parent="56" instance=ExtResource( 2 )]
+position = Vector2( 768, 672 )
+half_beats = 2
+
+[node name="57" type="Node2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="57" instance=ExtResource( 4 )]
+position = Vector2( 672, 576 )
+curve = SubResource( 115 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="57" instance=ExtResource( 3 )]
+position = Vector2( 288, 384 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="57" instance=ExtResource( 2 )]
+position = Vector2( 480, 192 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="57" instance=ExtResource( 4 )]
+position = Vector2( 576, 288 )
+curve = SubResource( 116 )
+half_beats = 2
+
+[node name="EditorHitRest2" parent="57" instance=ExtResource( 3 )]
+position = Vector2( 864, 384 )
+half_beats = 1
+
+[node name="EditorHitBeat2" parent="57" instance=ExtResource( 2 )]
+position = Vector2( 960, 288 )
+half_beats = 1
+
+[node name="EditorHitRest3" parent="57" instance=ExtResource( 3 )]
+position = Vector2( 1056, 384 )
+half_beats = 3
+
+[node name="EditorHitBeat3" parent="57" instance=ExtResource( 2 )]
+position = Vector2( 1152, 288 )
+half_beats = 2
+
+[node name="58" type="Node2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="58" instance=ExtResource( 4 )]
+position = Vector2( 1152, 480 )
+curve = SubResource( 117 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="58" instance=ExtResource( 3 )]
+position = Vector2( 1536, 288 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="58" instance=ExtResource( 2 )]
+position = Vector2( 1632, 192 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="58" instance=ExtResource( 4 )]
+position = Vector2( 1728, 288 )
+curve = SubResource( 118 )
+half_beats = 4
+
+[node name="EditorHitRest2" parent="58" instance=ExtResource( 3 )]
+position = Vector2( 1344, 672 )
+half_beats = 3
+
+[node name="EditorHitBeat4" parent="58" instance=ExtResource( 2 )]
+position = Vector2( 1248, 480 )
+half_beats = 2
+
+[node name="59" type="Node2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="59" instance=ExtResource( 4 )]
+position = Vector2( 1056, 576 )
+curve = SubResource( 119 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="59" instance=ExtResource( 3 )]
+position = Vector2( 672, 192 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="59" instance=ExtResource( 2 )]
+position = Vector2( 864, 192 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="59" instance=ExtResource( 4 )]
+position = Vector2( 960, 288 )
+curve = SubResource( 120 )
+half_beats = 2
+
+[node name="EditorHitRest2" parent="59" instance=ExtResource( 3 )]
+position = Vector2( 1248, 192 )
+half_beats = 1
+
+[node name="EditorHitBeat2" parent="59" instance=ExtResource( 2 )]
+position = Vector2( 1344, 288 )
+half_beats = 2
+
+[node name="EditorHitRest3" parent="59" instance=ExtResource( 3 )]
+position = Vector2( 1440, 384 )
+half_beats = 2
+
+[node name="EditorHitBeat3" parent="59" instance=ExtResource( 2 )]
+position = Vector2( 1536, 288 )
+half_beats = 2
+
+[node name="60" type="Node2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="60" instance=ExtResource( 4 )]
+position = Vector2( 672, 576 )
+curve = SubResource( 121 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="60" instance=ExtResource( 3 )]
+position = Vector2( 768, 288 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="60" instance=ExtResource( 2 )]
+position = Vector2( 768, 96 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="60" instance=ExtResource( 4 )]
+position = Vector2( 864, 192 )
+curve = SubResource( 122 )
+half_beats = 4
+
+[node name="EditorHitRest2" parent="60" instance=ExtResource( 3 )]
+position = Vector2( 864, 672 )
+half_beats = 3
+
+[node name="EditorHitBeat2" parent="60" instance=ExtResource( 2 )]
+position = Vector2( 768, 672 )
+half_beats = 2
+
+[node name="61" type="Node2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="61" instance=ExtResource( 4 )]
+position = Vector2( 672, 576 )
+curve = SubResource( 123 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="61" instance=ExtResource( 3 )]
+position = Vector2( 288, 384 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="61" instance=ExtResource( 2 )]
+position = Vector2( 480, 192 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="61" instance=ExtResource( 4 )]
+position = Vector2( 576, 288 )
+curve = SubResource( 124 )
+half_beats = 2
+
+[node name="EditorHitRest2" parent="61" instance=ExtResource( 3 )]
+position = Vector2( 864, 384 )
+half_beats = 1
+
+[node name="EditorHitBeat2" parent="61" instance=ExtResource( 2 )]
+position = Vector2( 960, 288 )
+half_beats = 1
+
+[node name="EditorHitRest3" parent="61" instance=ExtResource( 3 )]
+position = Vector2( 1056, 384 )
+half_beats = 3
+
+[node name="EditorHitBeat3" parent="61" instance=ExtResource( 2 )]
+position = Vector2( 1152, 288 )
+half_beats = 2
+
+[node name="62" type="Node2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="62" instance=ExtResource( 4 )]
+position = Vector2( 1152, 480 )
+curve = SubResource( 125 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="62" instance=ExtResource( 3 )]
+position = Vector2( 1536, 288 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="62" instance=ExtResource( 2 )]
+position = Vector2( 1632, 192 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="62" instance=ExtResource( 4 )]
+position = Vector2( 1728, 288 )
+curve = SubResource( 126 )
+half_beats = 4
+
+[node name="EditorHitRest2" parent="62" instance=ExtResource( 3 )]
+position = Vector2( 1344, 672 )
+half_beats = 3
+
+[node name="EditorHitBeat4" parent="62" instance=ExtResource( 2 )]
+position = Vector2( 1248, 480 )
+half_beats = 2
+
+[node name="63" type="Node2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EditorHitRoller3" parent="63" instance=ExtResource( 4 )]
+position = Vector2( 1056, 576 )
+curve = SubResource( 127 )
+half_beats = 4
+
+[node name="EditorHitRest" parent="63" instance=ExtResource( 3 )]
+position = Vector2( 672, 192 )
+half_beats = 2
+
+[node name="EditorHitBeat" parent="63" instance=ExtResource( 2 )]
+position = Vector2( 864, 192 )
+half_beats = 1
+
+[node name="EditorHitRoller4" parent="63" instance=ExtResource( 4 )]
+position = Vector2( 960, 288 )
+curve = SubResource( 128 )
+half_beats = 2
+
+[node name="EditorHitRest2" parent="63" instance=ExtResource( 3 )]
+position = Vector2( 1248, 192 )
+half_beats = 1
+
+[node name="EditorHitBeat2" parent="63" instance=ExtResource( 2 )]
+position = Vector2( 1344, 288 )
+half_beats = 2
+
+[node name="EditorHitRest3" parent="63" instance=ExtResource( 3 )]
+position = Vector2( 1440, 384 )
+half_beats = 2
+
+[node name="EditorHitBeat3" parent="63" instance=ExtResource( 2 )]
+position = Vector2( 1536, 288 )
+half_beats = 2

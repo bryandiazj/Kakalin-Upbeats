@@ -1,0 +1,12 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://RhythmGame/Tracks/TrackData.gd" type="Script" id=1]
+[ext_resource path="res://RhythmGame/Tracks/DiscoLounge/icon_disco_lounge.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+label = "Rebel Yell"
+stream = "res://RhythmGame/Tracks/RebelYell/EPIC ROCK _ ''Rebel Yell'' by Blakwall.ogg"
+bpm = 142
+icon = ExtResource( 2 )
+artist = "Blakwall"

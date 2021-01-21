@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/EPIC ROCK _ ''Rebel Yell'' by Blakwall.ogg-8db40858acd2a50d7a9d4c1d1eb07976.oggstr"
+
+[deps]
+
+source_file="res://RhythmGame/Tracks/RebelYell/EPIC ROCK _ ''Rebel Yell'' by Blakwall.ogg"
+dest_files=[ "res://.import/EPIC ROCK _ ''Rebel Yell'' by Blakwall.ogg-8db40858acd2a50d7a9d4c1d1eb07976.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
